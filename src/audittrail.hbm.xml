@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package = "com.siemens.scr.avt.ad.audit" schema="AD">
+       <class name = "AuditTrail" table = "AUDITTRAIL">
+			<id name="auditTrailId">
+				<generator class = "native" />
+			</id>
+			<many-to-one name="user" column="userId"/>
+			<property name="uid"/>
+			<property name="comment"/>
+			<property name="timestamp" type="timestamp"/>		
+       </class>   
+</hibernate-mapping>
